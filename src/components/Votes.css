@@ -1,0 +1,12 @@
+.Votes {
+  margin: 10px;
+}
+
+.Votes h2 {
+  font-family: "Caveat", cursive;
+}
+
+.Votes div {
+  min-height: 20px;
+  border-radius: 8px;
+}
