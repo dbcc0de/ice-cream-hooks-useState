@@ -8,6 +8,7 @@ button {
 
 button:hover {
   background-color: #1e60a9;
+  cursor: pointer;
 }
 
 .voteForContainer {
@@ -18,6 +19,7 @@ button:hover {
   .main-container {
     display: flex;
     justify-content: space-around;
+    align-content: center;
     margin: 10px;
   }
 }

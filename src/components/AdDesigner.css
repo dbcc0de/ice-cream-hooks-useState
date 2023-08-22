@@ -1,5 +1,7 @@
 .AdDesigner {
   font-family: sans-serif;
+  margin: 10px;
+  flex: 1;
 }
 
 .AdDesigner h2,
@@ -7,18 +9,9 @@
   font-family: "Caveat", cursive;
 }
 
-.voteForContainer {
-  border: 2px solid #222;
-  color: #000;
-  box-shadow: 1px 1px 2px 0px;
-  text-align: center;
-}
-
-.darkTheme {
-  background-color: #222;
-  color: #fff;
-  border: 2px solid black;
-  box-shadow: 0px 0px 5px 4px gray;
+.AdDesigner p {
+  padding: 5px;
+  font-weight: bold;
 }
 
 button:disabled {

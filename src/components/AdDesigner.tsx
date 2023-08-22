@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./AdDesigner.css";
+import Ad from "./Ad";
 
 const AdDesigner = () => {
   let [flavor, setFlavor] = useState("Vanilla");
@@ -9,32 +10,29 @@ const AdDesigner = () => {
     addClass += " darkTheme";
   }
   let [fontSize, setFontSize] = useState(18);
-  const styles = {
-    fontSize: fontSize + "px",
-  };
+  // const styles = {
+  //   fontSize: fontSize + "px",
+  // };
   return (
     <div className="AdDesigner">
       <h2>Ad Designer</h2>
-      <div className={"voteForContainer" + addClass}>
-        <p>Vote For</p>
-        <h3 style={styles}>{flavor}</h3>
-      </div>
+      <Ad flavor={flavor} lightTheme={lightTheme} fontSize={fontSize} />
       <p>What to Support</p>
       <button
         disabled={flavor === "Chocolate"}
-        onClick={() => setFlavor((flavor = "Chocolate"))}
+        onClick={() => setFlavor("Chocolate")}
       >
         Chocolate
       </button>
       <button
         disabled={flavor === "Vanilla"}
-        onClick={() => setFlavor((flavor = "Vanilla"))}
+        onClick={() => setFlavor("Vanilla")}
       >
         Vanilla
       </button>
       <button
         disabled={flavor === "Strawberry"}
-        onClick={() => setFlavor((flavor = "Strawberry"))}
+        onClick={() => setFlavor("Strawberry")}
       >
         Strawberry
       </button>
@@ -53,9 +51,10 @@ const AdDesigner = () => {
       </button>
       <p>Font Size</p>
       <div className="font-container">
-        <button onClick={() => setFontSize((fontSize -= 1))}>Down</button>
+        <button onClick={() => setFontSize((prev) => prev - 1)}>Down</button>
+        {/* onClick={() => setFontSize((fontSize += 1))} */}
         <span>{fontSize}</span>
-        <button onClick={() => setFontSize((fontSize += 1))}>Up</button>
+        <button onClick={() => setFontSize((prev) => prev + 1)}>Up</button>
       </div>
     </div>
   );

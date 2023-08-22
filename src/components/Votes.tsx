@@ -89,8 +89,39 @@ const Votes = () => {
           </div>
         </div>
       </div>
+      {!!totalVotes && (
+        <>
+          <ul>
+            Total Votes
+            <li>Chocolate: {chocolateVotes}</li>
+            <li>Vanilla: {vanillaVotes}</li>
+            <li>Strawberry: {strawberryVotes}</li>
+          </ul>
+        </>
+      )}
     </div>
   );
 };
 
+/* {totalVotes ? (
+  <>
+  <p>Chocolate: {}</p>
+  <div></div>
+  <p>Vanilla: {}</p>
+  <div></div>
+  <p>Strawberry: {}</p>
+  <div></div>
+</>
+) : (
+<p>No votes yet.</p>
+)}
+{chocolateVotes && (
+  <>
+    <p>Chocolate: {}</p>
+    <div></div>
+  </>
+)}
+
+
+*/
 export default Votes;
